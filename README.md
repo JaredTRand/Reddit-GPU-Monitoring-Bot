@@ -5,3 +5,5 @@ I made a bot that looks over a subreddit for deals on PC parts, and texts me whe
 I tried several ways to make it text a phone number, but I couldn't manage to get any to work, so I gave in and used Twilio.
 (I did manage to make it email me just fine though.)
 :D
+
+### Utilizes PRAW and Twilio
