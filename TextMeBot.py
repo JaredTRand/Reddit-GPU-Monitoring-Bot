@@ -25,12 +25,16 @@ else:
 
 for submission in subreddit.stream.submissions():
         if submission.id not in posts_replied_to:
-            if re.search("gpu", submission.title, re.IGNORECASE):
+            price = 0
+            title = submission.title
+            int(filter(title.isdigit, price))
+
+            if price > 500:
                 count += 1
-                print("Found GPU\n Sending...")
+                print("Found turnips\n Sending...")
                 message = ("\n{0} \n\n\n {1}".format(submission.title, submission.url))
                 SMS.send4(message)
-                print("\n ::Sent:: \n GPUs Sent: {0}\n\n".format(str(count)))
+                print("\n ::Sent:: \n Turnips Sent: {0}\n\n".format(str(count)))
 
                 with open("posts_replied_to.txt", "w") as f:
                     for post_id in posts_replied_to:
